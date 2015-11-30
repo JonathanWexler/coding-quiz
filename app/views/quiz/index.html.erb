@@ -1,0 +1,54 @@
+<div class="centered">
+    <h1 class="name">WDI <img src="https://cdn2.iconfinder.com/data/icons/humano2/128x128/apps/beryl-manager.png" alt=""> Quiz</h1>
+    <h3>The Quiz to see how much you've learned!</h3>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-1 title block lifeline">
+            <%= image_tag "http://megaicons.net/static/img/icons_title/8/60/title/basic-help-2-icon.png", width: "60px"%>
+        </div>
+        <div class="col-sm-1 title block lifeline">
+            <%= image_tag "https://cdn4.iconfinder.com/data/icons/social-icons-6/40/phone-512.png", width: "60px"%>
+        </div>
+        <div class="col-sm-1 title block lifeline">
+           <%= image_tag "https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/globe-512.png", width: "60px"%>
+       </div>
+
+       <div class="col-sm-6 title block"></div>
+       <div class="col-sm-1 title block lifeline">
+          <%= image_tag "https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/globe-512.png", width: "60px"%>
+      </div>
+      <div class="col-sm-1 title block lifeline">
+        <%= image_tag "https://cdn4.iconfinder.com/data/icons/social-icons-6/40/phone-512.png", width: "60px"%>
+    </div>
+    <div class="col-sm-1 title block lifeline">
+        <%= image_tag "http://megaicons.net/static/img/icons_title/8/60/title/basic-help-2-icon.png", width: "60px"%>
+    </div>
+
+</div>
+</div>
+
+<script>
+
+</script>
+<div class="container-fluid">
+    <div class="row block">
+        <% Question.topics.each do |t| %>
+        <div class="col-xs-2 title block" > <h1><%= t %> </h1> </div>
+        <%end %>
+    </div>
+
+
+    <% for x in 0...6 %>
+    <div class="row block">
+
+        <% for i in 0...6 do %>
+        <% puts "GAME TIME"%>
+        <% puts q = @qs[i] %>
+        <%= content_tag(:div, content_tag(:h1, (x+1)*100 ), class: "col-xs-2 level#{x/2} block question", data: {q: q[x].text, a: q[x].answer})%>
+        <% end %>
+    </div>
+
+    <% end %>
+
+</div>

@@ -1,0 +1,89 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_self
+ *= require jquery.colorbox-example1
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ @import "lightbox";
+
+ .block {
+    height: 100px;
+    border: 5px solid white;
+    text-align: center;
+    padding-top: 10px;
+    cursor:url(https://cdn2.iconfinder.com/data/icons/humano2/128x128/apps/beryl-manager.png), auto; 
+
+
+    .title{
+        border: 5px solid black;
+        padding-left: -10px;
+
+    }
+
+    .level0{
+        background-color: green;
+        &:hover {
+            font-size: 50px;
+            background-color:gold;
+        }
+
+    }
+
+    .level1 {
+        background-color: yellow;
+        &:hover {
+            font-size: 50px;
+            background-color:gold;
+        }
+    }
+
+    .level2{
+        background-color: red;
+        &:hover {
+            font-size: 50px;
+            background-color:gold;
+        }
+    }
+}
+
+.centered {
+    text-align: center;
+}
+
+#colorbox {
+    height:50%;
+    width: 50%;
+}
+
+.quest{
+    font-size: 65px;
+}
+
+.ans{
+    color: blue;
+}
+
+.name{
+    font-size: 80px;
+}
+
+.lifeline {
+    background-color:orange;
+    cursor: pointer;
+    &:hover {
+        font-size: 50px;
+        background-color:gold;
+    }
+}

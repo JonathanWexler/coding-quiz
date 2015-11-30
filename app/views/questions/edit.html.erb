@@ -1,0 +1,13 @@
+<div class="container">
+    
+    <h1>Edit QUESTION</h1>
+
+    <%= simple_form_for @question do |f| %>
+    <%= f.input :text %>
+    <%= f.input :answer %>
+    <%= f.input :difficulty %>
+    <%= f.input :topic %>
+    <%= f.button :submit %>
+    <% end %>
+    
+</div>

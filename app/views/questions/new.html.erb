@@ -1,0 +1,17 @@
+<div class="container">
+
+    <h1>NEW QUESTION</h1>
+
+    <%= simple_form_for @question do |f| %>
+    <%= f.input :text %>
+    <%= f.input :answer %>
+    <%= f.input :difficulty do %>
+    <%= f.select :difficulty, Question.difficulty.enum_for(:each_with_index).map { |q, i| [q, i] }, include_blank: true %>
+    <% end %>
+    <%= f.input :topic do %>
+    <%= f.select :topic, Question.topics.enum_for(:each_with_index).map { |t, i| [t, i] }, include_blank: true %>
+    <% end %>
+    <%= f.button :submit %>
+    <% end %>
+
+</div>

@@ -1,0 +1,36 @@
+<%= link_to "new", new_question_path%>
+<div class="centered">
+    <h1>Questions#index</h1>
+
+    <table border="4">
+        <tr>
+            <td>
+                Question
+            </td>
+            <td>
+                Answer
+            </td>
+            <td>
+                Difficulty
+            </td>
+            <td>
+                Topic
+            </td>
+            <td>
+                Edit
+            </td>
+        </tr>
+
+        <% @questions.each do |q| %>
+        <tr>
+            <td><%= q.text %></td> 
+            <td><%= q.answer %></td> 
+            <td><%= show_difficulty(q.difficulty) %></td> 
+            <td><%= show_topic(q.topic) %></td> 
+            <td><%= link_to("Edit #{q.id}", edit_question_path(q)) %></td> 
+
+        </tr>
+        <%end%>
+
+    </table>
+</div>
