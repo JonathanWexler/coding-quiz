@@ -97,9 +97,9 @@
     animation: mymove 1s;
 }
 @-webkit-keyframes mymove {
-    0%   {font-size: 80px;}
-    50%  {font-size: 40px;}
-    100% {font-size: 80px;}
+    0%   {font-size: 80px; letter-spacing: 1px;}
+    50%  {font-size: 40px; letter-spacing: 7px; color: firebrick;}
+    100% {font-size: 80px; letter-spacing: 1px;}
 }
 
 

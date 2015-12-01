@@ -57,9 +57,14 @@ jQuery(document).ready(function () {
     $( ".question" ).click(function() {
         // console.log("Hello")
         item = $(this)
+        
+
         $( this ).css("background-color", "transparent");
         // alert($(this).html())
+        // alert(blarg)
         $.colorbox({html:"<h1 class='quest centered'>" + $(this).data("q") + "</h1>", width: 900, height: 800});
+        
+
     });
 
     $( "#colorbox" ).click(function() {
