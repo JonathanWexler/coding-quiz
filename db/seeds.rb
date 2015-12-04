@@ -45,7 +45,7 @@ topic: 0
 
 Question.create({
     text: "Provide a sample for loop in JS (syntax must be correct)",
-    answer: "for(vari=0;i<list.length();i++){})",
+    answer: "for(vari=0;i&#60;list.length();i++){})",
 difficulty: 2,
 topic: 0
 })
@@ -68,7 +68,7 @@ Question.create({
     })
 
 Question.create({
-    text: "True or False: The <header> tag is equivalent to the <head> tag.",
+    text: "True or False: The &#60;header&#62; tag is equivalent to the &#60;head&#62; tag.",
     answer: "False. The header tag is for displaying information at the top of your page.",
     difficulty: 1,
     topic: 1

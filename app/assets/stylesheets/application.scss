@@ -77,6 +77,7 @@
 
 .name{
     font-size: 80px;
+    transition-duration: 2s;
 }
 
 .lifeline {
@@ -147,4 +148,15 @@
 
 .donate-now label:hover {
      background:#DDD;
+}
+
+
+.zoom {
+    -webkit-animation: mymove 1s;
+    animation: mymove 1s;
+}
+@-webkit-keyframes mymove {
+    0%   {font-size: 80px; letter-spacing: 1px;}
+    50%  {font-size: 40px; letter-spacing: 7px; color: firebrick;}
+    100% {font-size: 80px; letter-spacing: 1px;}
 }

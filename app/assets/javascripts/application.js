@@ -20,16 +20,28 @@
 
 
 jQuery(document).ready(function () {
-    // console.log("Hello")
-    $(".name").click(function() {
-     $(this).animate({
-        fontSize: "40px"
-    }, 500);
-     $(this).animate({
-        fontSize: "100px"
-    }, 500);
-     $(this).toggle( "bounce", { times: 3 }, "slow" );
- });
+
+//     // console.log("Hello")
+//     $(".name").click(function() {
+//      $(this).animate({
+//         fontSize: "40px"
+//     }, 500);
+//      $(this).animate({
+//         fontSize: "100px"
+//     }, 500);
+//      $(this).toggle( "bounce", { times: 3 }, "slow" );
+//  });
+
+
+
+    $('.name').click(function() {
+        $('.name').addClass('zoom').on('webkitAnimationEnd', function () {
+        $('.name').removeClass('zoom');
+        });
+    });
+
+
+
 
     $(".lifeline").click(function() {
         $( this ).css("background-color", "gray");
@@ -45,9 +57,14 @@ jQuery(document).ready(function () {
     $( ".question" ).click(function() {
         // console.log("Hello")
         item = $(this)
+        
+
         $( this ).css("background-color", "transparent");
         // alert($(this).html())
+        // alert(blarg)
         $.colorbox({html:"<h1 class='quest centered'>" + $(this).data("q") + "</h1>", width: 900, height: 800});
+        
+
     });
 
     $( "#colorbox" ).click(function() {
