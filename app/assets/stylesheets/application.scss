@@ -87,3 +87,64 @@
         background-color:gold;
     }
 }
+
+.instruct{
+    font-size: 50px;
+    color:darkgrey;
+}
+
+.topic-selection{
+    width: 300px;
+    height:200px;
+    padding-top: 60px;
+    text-align: center;
+    font-size: 50px;
+    margin: 10px;
+}
+
+
+
+// **********
+
+.donate-now {
+     list-style-type:none;
+     margin:25px 0 0 0;
+     padding:0;
+}
+
+.donate-now li {
+     float:left;
+     margin:0 5px 0 0;
+    width:100px;
+    height:40px;
+    position:relative;
+}
+
+.donate-now label, .donate-now input {
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+
+.donate-now input[type="checkbox"] {
+    opacity:0.011;
+    z-index:100;
+}
+
+.donate-now input[type="checkbox"]:checked + label {
+    background:yellow;
+}
+
+.donate-now label {
+     padding:5px;
+     border:1px solid #CCC; 
+     cursor:pointer;
+    z-index:90;
+}
+
+.donate-now label:hover {
+     background:#DDD;
+}

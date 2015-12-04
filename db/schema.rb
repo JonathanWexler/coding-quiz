@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151104192300) do
+ActiveRecord::Schema.define(version: 20151204144006) do
+
+  create_table "game_questions", force: :cascade do |t|
+    t.integer  "game_id"
+    t.integer  "question_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "games", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "questions", force: :cascade do |t|
     t.string   "text"
@@ -20,6 +33,7 @@ ActiveRecord::Schema.define(version: 20151104192300) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "topic"
+    t.boolean  "whiteboard"
   end
 
 end

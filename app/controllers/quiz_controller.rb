@@ -1,4 +1,18 @@
 class QuizController < ApplicationController
+    def home
+        @game = Game.new
+        # if params[:selection]
+        #     @list << params[:selection]
+        #     puts @list
+        # else   
+        #    @list = [] 
+        # end
+
+        @topics = Question.topics
+        @topics_left = 5
+
+        # redirect_to home
+    end
   def index
     # for l in 0...6
     #     instance_variable_set("@level#{l}", [])

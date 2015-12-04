@@ -29,6 +29,6 @@ class QuestionsController < ApplicationController
   private
 
   def q_params
-      params.require(:question).permit(:text, :answer, :difficulty, :topic)
+      params.require(:question).permit(:text, :answer, :difficulty, :topic, :whiteboard)
   end
 end

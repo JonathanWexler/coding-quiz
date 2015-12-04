@@ -16,6 +16,9 @@
             <td>
                 Topic
             </td>
+                        <td>
+                Whiteboard
+            </td>
             <td>
                 Edit
             </td>
@@ -27,6 +30,7 @@
             <td><%= q.answer %></td> 
             <td><%= show_difficulty(q.difficulty) %></td> 
             <td><%= show_topic(q.topic) %></td> 
+            <td><%= q.whiteboard %></td> 
             <td><%= link_to("Edit #{q.id}", edit_question_path(q)) %></td> 
 
         </tr>

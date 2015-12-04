@@ -1,0 +1,57 @@
+<%= render 'top' %>
+<div class="container-fluid">
+    <div class="row centered">
+        <h1 class="instruct">Select <%= @topics_left%> Topics</h1>
+    </div>
+    
+
+</div>
+
+
+<div class="row centered">
+    <%= form_for @game do |f|%>
+       <%= f.text_field :title  %>
+    <% end %>
+
+
+    <% for i in 0...@topics.count do %>
+    <%= form_tag quiz_home_path, class:"btn-group donate-now" do%>
+
+    <%= hidden_field_tag "selection", i %>
+    <%= submit_tag @topics[i], class:"btn btn-primary"%>
+    <% end %>
+    <br>    
+
+    <% end%>
+</div>
+</div>
+
+<!-- 
+<ul class="donate-now">
+<li>
+    <input type="radio" id=<%="3"%> name="amount" />
+    <label for="a25">$25</label>
+</li>
+<li>
+    <input type="radio" id="a50" name="amount" />
+    <label for="a50">$50</label>
+</li>
+<li>
+    <input type="radio" id="a75" name="amount" checked="checked" />
+    <label for="a75">$75</label>
+</li>
+<li>
+    <input type="radio" id="a100" name="amount" />
+    <label for="a100">$100</label>
+</li>
+<li>
+    <input type="radio" id="other" name="amount" />
+    <label for="other">other:</label>
+</li>
+<li>
+    <input type="text" id="otherAmount" name="numAmount" />
+</li>
+</ul> -->
+
+
+</div>
