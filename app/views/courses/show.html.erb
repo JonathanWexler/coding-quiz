@@ -1,0 +1,38 @@
+<div class="container-fluid">
+    <div class="row centered">
+        <%= link_to games_path(course_id: @course.id, game:{title:""}), method: :post do %>
+        <div class="">
+            <h1> New Game </h1>
+        </div>
+        <% end %>
+
+        <h1><%= @course.name %></h1>
+        <h1>Students:</h1>
+
+        <h1>Choose or create students</h1>
+
+        <%= form_for @student do |f| %>
+        <%= f.text_field :first_name %>
+        <%= f.label :first_name %>    
+
+        <%= f.text_field :last_name %>
+        <%= f.label :last_name %>
+
+        <%= f.hidden_field :course_id, value: @course.id %>
+
+        <%= f.submit :submit %>
+        <% end %>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row centered">
+        <% @course.students.each do |s| %>
+        <%= link_to s do %>
+        <div class="user_button">
+            <h1> <%= s.full_name %> </h1>
+        </div>
+        <% end %>
+        <% end %>
+    </div>
+</div>

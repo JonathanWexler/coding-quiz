@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <div class="row centered">
+
+
+        <h1>Game: <%= @game.title %></h1>
+    </div>
+</div>
+
+<!-- DISPLAY TOPICS THIS GAME HAS -->
+<!-- MAKE TOPIC A MODEL -->
+<!-- HAVE EACH QUESTION SELECT A TOPIC AS STRING -->
+<!-- DIFFICULTY 0,1,2 -->
+<!-- WHITEBOARD flag for each question -->
+<!-- LIMIT 5 TOPICS PER GAME -->
+<!-- START BUTTON TO INITIALIZE GAME -->
+<!-- NAVIGATE TO MAKE TWO TEAMS, TEAM ONE SELECT MEMBERS -->
+<!-- TEAM TWO, JUST SELECT A NAME and ADD REMAINING STUDENTS -->
+<div class="container-fluid">
+    <div class="row centered">
+        <h1>Topics (choose 5):</h1>
+        <% @topics.each do |t| %>
+        <%= link_to root_path do %>
+        <span class="user_button">
+            <h1> <%= t %> </h1>
+        </span>
+        <% end %>
+        <% end %>
+    </div>
+</div>

@@ -2,8 +2,8 @@ Rails.application.routes.draw do
 
   get 'quiz/index'
   post 'quiz/home' => "quiz#home"
-  get 'game' => 'quiz#create_game', as: :games
-  resources :questions
+  # get 'game' => 'quiz#create_game', as: :games
+  resources :questions, :users, :courses, :games, :students
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,6 +1,6 @@
 class QuizController < ApplicationController
     def home
-        @game = Game.new
+        # @game = params[]|| Game.new
         # if params[:selection]
         #     @list << params[:selection]
         #     puts @list
@@ -10,6 +10,8 @@ class QuizController < ApplicationController
 
         @topics = Question.topics
         @topics_left = 5
+        @user = User.new
+        @users = User.all
 
         # redirect_to home
     end

@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <div class="row centered">
+        <h1>New Game</h1>
+
+        <%= form_for @game do |f| %>
+        <%= f.text_field :title %>
+        <%= f.label :title %>    
+        <!-- ADD MULTI SELECT FORM HERE -->
+        <%= f.hidden_field :course_id, value: @course.id %>
+
+        <%= f.submit :submit %>
+        <% end %>
+    </div>
+</div>  
+
+<div class="container-fluid">
+    <div class="row centered">
+        <% @topics.each do |t| %>
+        <!-- add_topic_path -->
+        <%= link_to root_path do %>
+        <div class="user_button">
+            <h1> <%= t %> </h1>
+        </div>
+        <% end %>
+        <% end %>
+    </div>
+</div>

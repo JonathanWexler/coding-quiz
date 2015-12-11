@@ -497,7 +497,7 @@ Question.create({
     }) 
 
 Question.create({
-    text: "When you run 'git remote add' which do you include first: the remote name or the remote url?",
+    text: "When you run 'git remote add' which do you include first: the local name for the remote repo or the remote repo's url?",
     answer: "The remote name!",
     difficulty: 2,
     topic: 3
@@ -607,7 +607,7 @@ Question.create({
 
 Question.create({
     text: "Write out on the board the fundamental steps for creating and contributing new content to git.",
-    answer: "git init, git add -A, git commit -m 'message', git add remote origin git git@github.com:<repo>, git push origin master",
+    answer: "git init, git add -A, git commit -m 'message', git add remote origin git git@github.com:&#60;repo&#60;, git push origin master",
     difficulty: 1,
     topic: 5
     }) 
@@ -630,7 +630,7 @@ Question.create({
 
 Question.create({
     text: "Write out how to add a 15 pixel left margin on a div without using margin-left.",
-    answer: "margin: 0 15px 0 0",
+    answer: "margin: 0 15px 0 0;",
     difficulty: 2,
     topic: 5
     }) 

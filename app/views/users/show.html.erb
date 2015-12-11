@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="row centered">
+        <h1><%= @user.full_name %></h1>
+        <h5><%= @user.position %></h5>
+        <h1>Courses:</h1>
+
+
+        <h1>Choose or create an account</h1>
+
+        <%= form_for @course do |f| %>
+        <%= f.text_field :name %>
+        <%= f.label :name %>
+
+        <%= f.date_select :start %>
+        <%= f.label :start %>
+
+        <%= f.date_select :end %>
+        <%= f.label :end %> 
+
+        <%= f.submit :submit %>
+        <% end %>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row centered">
+        <% @user.courses.each do |c| %>
+        <%= link_to c do %>
+        <div class="user_button">
+            <h1> <%= c.name %> </h1>
+        </div>
+        <% end %>
+        <% end %>
+    </div>
+</div>
