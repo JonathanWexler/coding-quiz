@@ -17,12 +17,26 @@
 <!-- TEAM TWO, JUST SELECT A NAME and ADD REMAINING STUDENTS -->
 <div class="container-fluid">
     <div class="row centered">
-        <h1>Topics (choose 5):</h1>
+        <h1>Topics (choose <%= 5-@game.topics.count%>):</h1>
         <% @topics.each do |t| %>
-        <%= link_to root_path do %>
+        <% if !@game.topics.include?(t)%>
+        <%= link_to add_topic_path({game_id: @game, topic_id: t}), method: :post do %>
         <span class="user_button">
-            <h1> <%= t %> </h1>
+            <h1> <%= t.name %> </h1>
         </span>
+        <% end %>
+        <% end %>
+        <% end %>
+
+
+        <h1>Selected Topics (<%= @game.topics.count%>):</h1>
+        <% @topics.each do |t| %>
+        <% if @game.topics.include?(t)%>
+        <%= link_to remove_topic_path({game_id: @game, topic_id: t}), method: :post do %>
+        <span class="user_button">
+            <h1> <%= t.name %> </h1>
+        </span>
+        <% end %>
         <% end %>
         <% end %>
     </div>

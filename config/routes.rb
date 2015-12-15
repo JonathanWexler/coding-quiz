@@ -1,9 +1,19 @@
 Rails.application.routes.draw do
 
+  get 'topics/index'
+
+  get 'topics/show'
+
+  get 'topics/new'
+
+  get 'topics/edit'
+
   get 'quiz/index'
   post 'quiz/home' => "quiz#home"
+  post 'add-topic' => "games#add_topic", as: :add_topic
+  post 'remove-topic' => "games#remove_topic", as: :remove_topic
   # get 'game' => 'quiz#create_game', as: :games
-  resources :questions, :users, :courses, :games, :students
+  resources :questions, :users, :courses, :games, :students, :topics
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

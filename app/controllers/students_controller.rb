@@ -20,6 +20,13 @@ class StudentsController < ApplicationController
   def show
   end
 
+  def destroy
+    @course = Course.find(params[:course_id])
+    @student = Student.find(params[:id])
+    Student.destroy(params[:id])
+    redirect_to @course
+  end
+
   private
 
   def student_params

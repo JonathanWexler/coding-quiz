@@ -35,18 +35,6 @@
     </div>
 </div>
 
-<div class="row centered">
-
-    <% for i in 0...@topics.count do %>
-    <%= form_tag quiz_home_path, class:"btn-group donate-now" do%>
-
-    <%= hidden_field_tag "selection", i %>
-    <%= submit_tag @topics[i], class:"btn btn-primary"%>
-    <% end %>
-    <br>    
-
-    <% end%>
-</div>
 </div>
 
 </div>

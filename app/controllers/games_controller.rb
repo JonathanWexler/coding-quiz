@@ -16,12 +16,26 @@ class GamesController < ApplicationController
       redirect_to @game
   end
 
+  def add_topic
+    @topic = Topic.find(params[:topic_id])
+    @game = Game.find(params[:game_id])
+    @game.topics << @topic
+    redirect_to @game
+  end  
+
+  def remove_topic
+    @topic = Topic.find(params[:topic_id])
+    @game = Game.find(params[:game_id])
+    @game.topics.destroy(@topic)
+    redirect_to @game
+  end
+
   def edit
   end
 
   def show
     @game = Game.find(params[:id])
-    @topics = Question.topics
+    @topics = Topic.all
   end
 
   private

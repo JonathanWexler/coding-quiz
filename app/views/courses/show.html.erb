@@ -6,10 +6,24 @@
         </div>
         <% end %>
 
+        <h1>Games:</h1>
+        <div class="container-fluid">
+            <div class="row centered">
+                <% @course.games.each do |g| %>
+                <%= link_to g do %>
+                <div class="user_button">
+                    <h1> <%= g.title %> </h1> 
+                </div>
+                <% end %>
+                <% end %>
+            </div>
+        </div>
+
         <h1><%= @course.name %></h1>
-        <h1>Students:</h1>
+
 
         <h1>Choose or create students</h1>
+        <h1>Students:</h1>
 
         <%= form_for @student do |f| %>
         <%= f.text_field :first_name %>
@@ -30,7 +44,7 @@
         <% @course.students.each do |s| %>
         <%= link_to s do %>
         <div class="user_button">
-            <h1> <%= s.full_name %> </h1>
+            <h1> <%= s.full_name %> </h1> <span> <%= link_to "x", student_path(id: s, course_id: @course.id), method: :delete %></span>
         </div>
         <% end %>
         <% end %>

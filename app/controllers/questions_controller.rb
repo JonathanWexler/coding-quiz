@@ -5,6 +5,7 @@ class QuestionsController < ApplicationController
 
   def new
     @question = Question.new
+    @topic = Topic.new
   end
 
   def create
