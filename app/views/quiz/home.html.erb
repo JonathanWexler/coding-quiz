@@ -24,6 +24,30 @@
 
 <div class="container-fluid">
     <div class="row centered">
+        <h1 class="instruct">Select <%= @topics_left%> Topics</h1>
+        <h1>Sign Up</h1>
+
+        <%= form_for @user do |f| %>
+        <%= f.text_field :first_name %>
+        <%= f.label :first_name %>
+
+        <%= f.text_field :last_name %>
+        <%= f.label :last_name %>
+
+        <%= f.text_field :email %>
+        <%= f.label :email %>  
+
+        <%= f.text_field :position %>
+        <%= f.label :position %>
+
+        <%= f.submit :submit %>
+        <% end %>
+    </div>
+    
+</div>
+
+<div class="container-fluid">
+    <div class="row centered">
         <% @users.each do |u| %>
         <%= link_to u do %>
         <div class="user_button">
