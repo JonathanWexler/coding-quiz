@@ -9,7 +9,12 @@ class User < ActiveRecord::Base
   validates_format_of :email, with: /\@nycda\.com/, message: 'You should have an email from nycda.com'
 
 
+  
   def full_name
-    first_name + " " + last_name
+  	if !first_name.nil? && !last_name.nil?
+    	return first_name + " " + last_name
+	else
+		return email
+	end
 end
 end
