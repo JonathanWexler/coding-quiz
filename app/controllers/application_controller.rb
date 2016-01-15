@@ -8,4 +8,10 @@ class ApplicationController < ActionController::Base
           @current_user = User.find(session[:user_id])
       end
   end
+
+  def current_game
+      if session[:game_id]
+          @current_game = Game.find(session[:game_id])
+      end
+  end
 end

@@ -17,22 +17,28 @@
 <!-- TEAM TWO, JUST SELECT A NAME and ADD REMAINING STUDENTS -->
 <div class="container-fluid">
     <div class="row centered">
+        <% if @game.topics.count < 5%>
         <h1>Topics (choose <%= 5-@game.topics.count%>):</h1>
         <% @topics.each do |t| %>
-        <% if !@game.topics.include?(t)%>
-        <%= link_to add_topic_path({game_id: @game, topic_id: t}), method: :post do %>
+        <% if !@game.topics.include?(t) && @game.topics.count < 5%>
+        <%= link_to add_topic_path({game_id: @game, topic_id: t}), method: :post,  class: "btn btn-warning" do %>
         <span class="user_button">
             <h1> <%= t.name %> </h1>
         </span>
         <% end %>
         <% end %>
         <% end %>
+        <% else %>
+         <%= link_to( (content_tag :h1, "Start Game"), root_path, class: "btn btn-success") %>
+
+        <!-- <h1> Start Game</h1> -->
+        <% end %>
 
 
         <h1>Selected Topics (<%= @game.topics.count%>):</h1>
         <% @topics.each do |t| %>
         <% if @game.topics.include?(t)%>
-        <%= link_to remove_topic_path({game_id: @game, topic_id: t}), method: :post do %>
+        <%= link_to remove_topic_path({game_id: @game, topic_id: t}), method: :post,  class: "btn btn-info" do %>
         <span class="user_button">
             <h1> <%= t.name %> </h1>
         </span>

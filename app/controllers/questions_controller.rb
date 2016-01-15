@@ -9,6 +9,8 @@ class QuestionsController < ApplicationController
   end
 
   def create
+    puts "QUESTIONS IS: "
+    puts params
       @q = Question.create(q_params)
       redirect_to question_path(@q)
   end
