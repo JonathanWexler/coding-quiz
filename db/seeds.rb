@@ -3,84 +3,82 @@
 #
 
 
-
-
-# ------------ Google Me ----------------
+# ------------H T M L----------------
 Question.create({
-    text: "What is a framework?",
-    answer: "Jeff Bowne",
+    text: "Every line of HTML requires opening and closing what?",
+    answer: "tags",
     difficulty: 0,
     topic: 0
     }) 
 
 Question.create({
-    text: "Up to how many models can a rails app have?",
-    answer: " virtually infinitely many ",
+    text: "What does DOM stand for?",
+    answer: "Document Object Model.",
     difficulty: 0,
-    topic: 0
-    }) 
-
-
-
-Question.create({
-    text: "From what other library does a rails model inherit methods?",
-    answer: "ActiveRecord::Base",
-    difficulty: 1,
-    topic: 0
-    }) 
-
-Question.create({
-    text: "If Wobbles have many Bobbles, and Bobbles have many Wobbles, what do you need to connect them?",
-    answer: "a 'wobble_bobbles' join table that belongs_to :wobble, and :bobble",
-    difficulty: 1,
     topic: 0
     }) 
 
 
 
 Question.create({
-    text: "How do you associate a Game to an Athlete that has many Games in a controller?",
-    answer: "@athlete.games.push(@game)",
+    text: "True or False: The &#60;header&#62; tag is equivalent to the &#60;head&#62; tag.",
+    answer: "False. The header tag is for displaying information at the top of your page.",
+    difficulty: 1,
+    topic: 0
+    }) 
+
+Question.create({
+    text: "Name the semantically preferred tags that replace &#60;b&#62; and &#60;i&#62;?",
+    answer: "&#60;strong&#62; and &#60;em&#62;",
+    difficulty: 1,
+    topic: 0
+    }) 
+
+
+
+Question.create({
+    text: "Name three common inline elements, not including the tags that make text bold or italic.",
+    answer: "Span element, anchor element, image element.",
     difficulty: 2,
     topic: 0
     }) 
 
 Question.create({
-    text: "True of False: you can create a Rails app without using terminal at all.",
-    answer: "True. A rails app is a directory of files. If you know what goes in those files and how to connect them, its only a matter of typing out code.",
+    text: "What styles does an &#60;h1&#62; tag have built in?",
+    answer: "Top and bottom margin, font size, and font-weight: bold.",
     difficulty: 2,
     topic: 0
     }) 
 
 
 
-# ------------ Gems ----------------
+# ------------C S S----------------
 
 Question.create({
-    text: "What is the file extension for a rails view?",
-    answer: "'.html.erb'",
+    text: "The # symbol specifies that the selector is...",
+    answer: "id",
     difficulty: 0,
     topic: 1
     }) 
 
 Question.create({
-    text: "If I want to use @users in my inde.html.erb view, what else do I need to make sure of? ",
-    answer: "@users is defined in the index action",
+    text: "What property is used to change the color of the text in an element?",
+    answer: "color",
     difficulty: 0,
     topic: 1
     }) 
 
 
 Question.create({
-    text: "how do you generate a controller with view files from terminal?",
-    answer: "rails generate controller home index new show",
+    text: "In the following snippet code, what value is given for the left margin- margin: 5px 10px 3px 8px;",
+    answer: "8px",
     difficulty: 1,
     topic: 1
     }) 
 
 Question.create({
-    text: "What happens if I have <%= end %> in my view?",
-    answer: "The app will crash",
+    text: "What is the correct CSS syntax to change the font name?",
+    answer: "font-family",
     difficulty: 1,
     topic: 1
     }) 
@@ -88,15 +86,15 @@ Question.create({
 
 
 Question.create({
-    text: "Name the actions that typically do NOT have views.",
-    answer: "create, update, destroy",
+    text: "What characters do you use to add a comment in a CSS file??",
+    answer: "/*like this*/",
     difficulty: 2,
     topic: 1
     }) 
 
 Question.create({
-    text: "If you create a custom 'jeff' action and 'jeff.html.erb' view, what else must you configure before that page will load?",
-    answer: "In routes.rb you need to specify the route: get 'home/jeff' => 'home#jeff'",
+    text: "Which snippet of CSS is commonly used to center a website horizontally?",
+    answer: "margin: 0 auto;",
     difficulty: 2,
     topic: 1
     }) 
@@ -104,68 +102,72 @@ Question.create({
 
 
 
-# ------------ Controllers ----------------
+
+
+# ------------Terminal----------------
 
 Question.create({
-    text: "What do you call a controller with a channel action that displays your favorite shows?",
-    answer: "'remote controller'",
+    text: "What is the command to see a list of the files in the current directory?",
+    answer: "ls",
     difficulty: 0,
     topic: 2
     }) 
 
 Question.create({
-    text: "If I have a ",
-    answer: "ruby main.rb <br> (or whatever you named your routes folder)",
+    text: "What is the command to move in to a directory?",
+    answer: "cd directoryname",
     difficulty: 0,
-    topic: 2
-    }) 
-
-
-
-Question.create({
-    text: "What would be the corresponding controller names for models called Apple, Octopus, Ox, and Child?",
-    answer: "ApplesController, OctopusesController, OxenController, ChildrenController",
-    difficulty: 1,
-    topic: 2
-    }) 
-
-Question.create({
-    text: "True or False: Your Controller action will default to look for a view of the same name?",
-    answer: "True",
-    difficulty: 1,
     topic: 2
     }) 
 
 
 
 Question.create({
-    text: "Where should you ideally put your current_user method?",
-    answer: "Anywhere you need to access the user logged in (ApplicationController)",
+    text: "What is the command to move up one folder?",
+    answer: "cd ..",
+    difficulty: 1,
+    topic: 2
+    }) 
+
+Question.create({
+    text: "What is the command to create a file?",
+    answer: "touch filename",
+    difficulty: 1,
+    topic: 2
+    }) 
+
+
+
+Question.create({
+    text: "What is the command to rename a file?",
+    answer: "mv oldname newname",
     difficulty: 2,
     topic: 2
     }) 
 
 Question.create({
-    text: "Explain what strong parameters offer and how to implement them in a controller.",
-    answer: "Offers security in mass assigning an object's attributes to the database. You add a private method that returns params.require(<object>).permit(<attributes>)",
+    text: "What is the command to create a directory called 'My Favorites'?",
+    answer: "mkdir My\\ Favorites",
     difficulty: 2,
     topic: 2
     }) 
 
 
 
-# ------------ JSON/AJAX ----------------
+
+
+# ------------Git / Github----------------
 
 Question.create({
-    text: "What data type in ruby does JSON's format most resemble?",
-    answer: "hash",
+    text: "What does the m stand for in git commit -m ?",
+    answer: "message",
     difficulty: 0,
     topic: 3
     }) 
 
 Question.create({
-    text: "What do you call the opposite of an HTTP request?",
-    answer: "response",
+    text: "How do you check how many files you've changed since the last commit?",
+    answer: "git status",
     difficulty: 0,
     topic: 3
     }) 
@@ -173,15 +175,15 @@ Question.create({
 
 
 Question.create({
-    text: "At what point in an AJAX request should you print out results? (looking for a keyword)",
-    answer: "success. Once the request is made successfully you can see the response.",
+    text: "What is the command to look at a list of the commits you've made?",
+    answer: "git log",
     difficulty: 1,
     topic: 3
     }) 
 
 Question.create({
-    text: "True or False: AJAX is ruby code that can make HTTP calls without refreshing the action?",
-    answer: "False. It is JavaScript code that silently makes HTTP requests.",
+    text: "How do you stage every file since your last commit?",
+    answer: "git add -A",
     difficulty: 1,
     topic: 3
     }) 
@@ -189,15 +191,15 @@ Question.create({
 
 
 Question.create({
-    text: "To what data type should we parse and assign a JSON response?",
-    answer: "A JavaScript Object",
+    text: "True or False: It is required that you name your git remote 'origin'.",
+    answer: "False, but it is a conventional.",
     difficulty: 2,
     topic: 3
     }) 
 
 Question.create({
-    text: "Where in your rails project directory structure should you put an AJAX request?",
-    answer: "<%= yield %>",
+    text: "When you run 'git remote add' which do you include first: the remote name or the remote url?",
+    answer: "The remote name!",
     difficulty: 2,
     topic: 3
     }) 
@@ -206,25 +208,35 @@ Question.create({
 
 
 
-# ------------ Helpa's ----------------
+
+# ------------V I M----------------
 
 Question.create({
-    text: "What is a view helper?",
-    answer: "It is a method that can be accessed within a view",
+    text: "How do you open a file in vim?",
+    answer: "vim filename",
     difficulty: 0,
     topic: 4
     }) 
 
 Question.create({
-    text: "Why shouldn't I helper?",
-    answer: "because I barely even know her",
+    text: "How do you save your file and exit vim?",
+    answer: ":wq",
     difficulty: 0,
     topic: 4
     }) 
 
+
+
 Question.create({
-    text: "Name 5 different helpers",
-    answer: "submit, text_field, label, image_tag, content_tag...",
+    text: "How do you remove a single letter in vim?",
+    answer: "Put your cursor over the letter and hit x",
+    difficulty: 1,
+    topic: 4
+    }) 
+
+Question.create({
+    text: "How do you delete an entire line in vim?",
+    answer: "dd",
     difficulty: 1,
     topic: 4
     }) 
@@ -232,23 +244,15 @@ Question.create({
 
 
 Question.create({
-    text: "True or False: A view helper method goes in the view's corresponding '_helper.rb' file inside of the 'config' folder?",
-    answer: "False. Helpers do not live in the config folder.",
-    difficulty: 1,
-    topic: 4
-    }) 
-
-
-Question.create({
-    text: "What does this view helper do? <br> def jeffify(stuff) <br> stuff.to_s + ' because Jeff owns you!'  <br> end",
-    answer: "It accepts an argument, converts it to a string and appends ' because Jeff owns you!'",
+    text: "How do you force vim to close without saving your progress?",
+    answer: ":q!",
     difficulty: 2,
     topic: 4
     }) 
 
 Question.create({
-    text: "How is submit_tag different from submit as two different helpers?",
-    answer: "submit_tag is usually used with a form_tag, while the normal submit helper would be for a form_for a model.",
+    text: "If I put my cursor over the s in the word 'nest' and hit rx what word does it change to?",
+    answer: "next",
     difficulty: 2,
     topic: 4
     }) 
@@ -256,50 +260,53 @@ Question.create({
 
 
 
-# ------------ White Board ----------------
+
+
+
+# ------------White Board----------------
 
 Question.create({
-    text: "Draw a Wobble playing 'Wobble Adventures'.",
+    text: "Draw a smiley face on the whiteboard. Sign your name.",
     answer: ":)",
     difficulty: 0,
     topic: 5
     }) 
 
+
+
 Question.create({
-    text: "What does ORM stand for? Write Pseudocode for the ActiveRecord 'find' method",
-    answer: "Object-Relational Mapping.",
+    text: "Write out the git command to make your github repository up to date with your latest commit.",
+    answer: "git push origin master",
     difficulty: 0,
     topic: 5
     }) 
 
-
-
 Question.create({
-    text: "rap 'I said a hip hop, Hippie to the hippie, The hip, hip a hop, and you don't stop, a rock it', returns 'Hippie to the hippie'. What does the method 'rap' look like?",
-    answer: "def rap (stuff) <br> stuff.split(',')[1] <br> end ",
-    difficulty: 1,
-    topic: 5
-    }) 
-
-Question.create({
-    text: "Write out a HomeController with the 4 CRUD data processing actions and a custom action",
-    answer: "class HomeController < ApplicationController <br>  def create <br> end<br> def show <br> end <br> def update <br>  end <br> def destroy <br> end <br> def jon <br>  end",
+    text: "Write out on the board the fundamental steps for creating and contributing new content to git.",
+    answer: "git init, git add -A, git commit -m 'message', git add remote origin git git@github.com:<repo>, git push origin master",
     difficulty: 1,
     topic: 5
     }) 
 
 
+
 Question.create({
-    text: "Draw out the basic 'app folder' directory structure of a rails app (from what we've learned so far)",
-    answer: "assets, controllers, helpers, mailers, models, views",
+    text: "Write out the CSS code to make the text in a div red, bold, Helvetica, and centered",
+    answer: "div {color:red; font-weight:bold; font-family:'Helvetica',sans-serif; text-align:center;}",
+    difficulty: 1,
+    topic: 5
+    }) 
+
+Question.create({
+    text: "Write out the skeleton structure for a basic HTML5 page",
+    answer: "DOCTYPE, html, head, title, body, header tags",
     difficulty: 2,
     topic: 5
     }) 
 
 Question.create({
-    text: "Write out code necessary to associate two models, Actor and Magazine, where actors can be in many magazines and magazines can show many actors.",
-    answer: "Actor has_many :actor_magazines and :magazines, through: :actor_magazines <br> Magazine has_many :actor_magazines, and :actors, through: :actor_magazines <br> ActorMagazine belongs_to :actor and :magazine",
+    text: "Write out how to add a 15 pixel left margin on a div without using margin-left.",
+    answer: "margin: 0 15px 0 0",
     difficulty: 2,
     topic: 5
     }) 
-
