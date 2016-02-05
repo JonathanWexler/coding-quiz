@@ -5,9 +5,9 @@
 
 
 
-# ------------ Models ----------------
+# ------------ Google Me ----------------
 Question.create({
-    text: "Name a super model",
+    text: "What is a framework?",
     answer: "Jeff Bowne",
     difficulty: 0,
     topic: 0
@@ -54,7 +54,7 @@ Question.create({
 
 
 
-# ------------ Views ----------------
+# ------------ Gems ----------------
 
 Question.create({
     text: "What is the file extension for a rails view?",
