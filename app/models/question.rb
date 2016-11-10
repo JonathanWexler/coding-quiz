@@ -4,10 +4,10 @@ class Question < ActiveRecord::Base
     # belongs_to :topic
 
     # TOPICS = ["JS", "HTML", "Ruby", "Functions", "Rails", "Whiteboard"]
-    # TOPICS = ["HTML", "CSS", "Terminal", "Git(hub)","VIM", "Whiteboard"]
+    TOPICS = ["HTML", "CSS", "Terminal", "Git(hub)","VIM", "Whiteboard"]
     # TOPICS = ["JS", "JQUERY", "DATA TYPES", "LOOPS","CSS", "Whiteboard"]
     # TOPICS = ["Ruby", "Adv. Ruby", "Sinatra", ".erb", "<%umm?%>", "Whiteboard"]
-    TOPICS = ["Models", "Views", "Controllers", "JSON/AJAX", "Form Helpa's", "Whiteboard"]
+    # TOPICS = ["Models", "Views", "Controllers", "JSON/AJAX", "Form Helpa's", "Whiteboard"]
     DIFFICULTY = ["Easy", "Medium", "Hard"]
 
     def self.topics
